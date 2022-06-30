@@ -1,4 +1,4 @@
-# UR5-driver 🕹 + 🤖 = 👍
+# UR5-driver 🕹 + 🤖 = 🦾
 Pure python script to communicate with UR5/e robot via TCP/IP network.
 
 ## Motivation
