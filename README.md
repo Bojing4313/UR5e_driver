@@ -7,7 +7,7 @@ Development of this driver was inspired by the python package writen by @gouxian
 
 Instead of using ROS, this package uses TCP/IP network protocol to communicate with the UR5 serials robot in a pure python way.
 
-Major improvments were made on surveillance of gesture using rtde and movement control to avoid potential error while commencing commands.
+Major improvments were made on adding real-time surveillance of gesture using rtde and movement control to avoid potential error while commencing commands.
 
 ## Code Structure
 The main functions are included in ` UR5e.py `.
@@ -24,7 +24,7 @@ All major commands were writen according to and are avialble on the manuscript f
 
 `increase_move()` is called when you want to control UR5 to move a increase distance from current position (delta_x, delta_y, delta_z, delta_theta), where delta_theta is the increase distance of the top-down orientation
 
-`operate_gripper()` is used control the gripper to open/close by passing bool value to the argument `grip`, width control is not avialble since various types of gripper may be present.
+`operate_gripper()` is used to control the gripper to open/close by passing bool value to the argument `grip`, width control is not avialble since various types of gripper may be present.
 
 `check_grasp()` is used to check if the gripper is grasping an object. while the gripper is not fully closed, the function returns True
 
@@ -39,4 +39,4 @@ All major commands were writen according to and are avialble on the manuscript f
 file `util.py` contains some coordinate transformation functions.
 
 ## Enviroment setup
-To setup the UR5e driver, all you need is a working python 3.7 installation and the and the file `rtde.py` and `serialize.py` from the UR5 official examples without any modification. Prior to the connection, you need to figure out the IP address of your UR5/e robot and change it in the 'ROBOT_HOST' constant. After that, you need to set your robot to the Remote Mode on the Teach Pendant.
+To setup the UR5e driver, all you need is a working python 3.7 installation and the and the file `rtde.py` and `serialize.py` from the UR5 official examples without any modification. Prior to the connection, you need to figure out the IP address of your UR5/e robot and adjust it to the 'ROBOT_HOST' constant. After that, you need to set your robot to the Remote Mode on the Teach Pendant.
